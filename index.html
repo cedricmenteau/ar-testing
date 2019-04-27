@@ -163,14 +163,24 @@
 
       <a-assets>
         <a-asset-item id="dragon" src="dragon/scene.gltf">
+          
       </a-assets>
 
       <a-marker preset="hiro" markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
         <a-entity
             gltf-model="#dragon"
-            scale="1"
-            rotation="-90 0 0">
+            scale="0.3 0.3 0.3"
+            rotation="-60 20 30">
         </a-entity>
+
+        <a-sphere id="sphere" position="1 0.5 2" src="textures/mercurio.jpg" radius="1" segments-height="53">
+            <a-animation attribute="rotation"
+                         dur="10000"
+                         fill="forwards"
+                         to="0 360 0"
+                         repeat="indefinite">            
+            </a-animation>
+        </a-sphere>
       </a-marker>
 
       <a-entity camera></a-entity>
