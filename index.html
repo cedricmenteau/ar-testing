@@ -163,10 +163,12 @@
 
       <a-assets>
         <a-asset-item id="dragon" src="dragon/scene.gltf">
-          
+        <video id="galaxy" autoplay loop="true" src="video/galaxy.mp4"></video>
       </a-assets>
 
       <a-marker preset="hiro" markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
+        <a-video src="#galaxy" rotation="90 0 0" width="3" height="3" position="-1 -3 -1"></a-video>
+
         <a-entity
             gltf-model="#dragon"
             scale="0.3 0.3 0.3"
